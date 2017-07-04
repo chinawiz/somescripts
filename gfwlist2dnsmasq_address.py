@@ -93,8 +93,9 @@ for line in tfs.readlines():
 tfs.close()
 
 for each in EX_DOMAIN:
-    fs.write('server=/%s/%s#%s\n' % (each, mydnsip, mydnsport))
-    fs.write('ipset=/%s/%s\n' % (each, ipsetname))
+    # fs.write('server=/%s/%s#%s\n' % (each, mydnsip, mydnsport))
+    # fs.write('ipset=/%s/%s\n' % (each, ipsetname))
+    fs.write('address=/%s/%s\n' %(each, mydnsip))
 
 print 'write extra domain done'
 
