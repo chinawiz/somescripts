@@ -3,6 +3,12 @@
 #
 # Generate a list of dnsmasq rules with ipset for gfwlist
 # Ref https://github.com/gfwlist/gfwlist
+# iptables 添加对应的规则
+# 在iptables 中添加匹配
+# iptables -I INPUT -m set --match-set blacklist src -j DROP
+# 劫持shadowsocks的dns请求
+# iptables -t nat -A OUTPUT -m owner --uid-owner shadowsocks -p udp --dport 53 -j DNAT --to 127.0.0.1
+
 
 import urllib2
 import re
