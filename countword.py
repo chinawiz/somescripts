@@ -6,13 +6,11 @@
 import collections
 import re
 import sys
-from optparse import OptionParser
 
 import jieba
 import jieba.analyse
 from jieba.analyse import ChineseAnalyzer
 
-sys.path.append('../')
 analyzer = ChineseAnalyzer()
 
 
